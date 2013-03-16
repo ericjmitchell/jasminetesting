@@ -55,6 +55,9 @@
 	</div>
     
     <?php
+    Bundle::start('jasminetesting');
+    //use Laravel\CLI\Command as Command;
+    //Command::run(array('jasminetesting::createtestroutes'));
     echo '<a href="'. URL::to_route('testRoute') .'">Tests</a>';
     ?>
     
