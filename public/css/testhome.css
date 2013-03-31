@@ -1,0 +1,15 @@
+/* 
+    Document   : testhome.css
+    Created on : Mar 26, 2013, 5:17:38 PM
+    Author     : Eric
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body { background-color: #333333; padding: 0; margin: 5px; overflow-y: scroll;}
+
+/*#HTMLReporter { font-size: 11px; font-family: Monaco, "Lucida Console", monospace; line-height: 14px; color: #333333; }*/
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+p, h1, h2, h3, h4, h5, h6 { margin: 0; line-height: 14px; }
+.banner{ padding-left: 9px; padding-right: 9px; margin-top: 14px;}
