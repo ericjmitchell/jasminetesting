@@ -17,7 +17,10 @@
           // Path to each jasmine suite to include
           "jasmine/spec/SpecHelper.js",
            "jasmine/spec/PlayerSpec.js"
-       )
+       ),
+       /*"module_suites" => array( // Optional list if using the Requirejs bundle as well. These will be loaded as dependencies for testing.
+
+       )*/
      )
    )
  )

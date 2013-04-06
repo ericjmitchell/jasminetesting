@@ -4,8 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Jasmine Test Suites Runner</title>
         
-        <link rel="stylesheet" type="text/css" href="public/css/testhome.css">
-        
+        {{ HTML::style(Bundle::assets("jasminetesting")."css/testhome.css") }}
     </head>
     <body>
         <div id="banner">

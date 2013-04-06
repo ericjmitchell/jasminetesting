@@ -40,6 +40,11 @@ class JasmineTesting_CreateTestRoutes_Task
             {
                 $data .= "Asset::add('$item', '$item');\n\t";
             }
+            if( Bundle::exists('requirejs') && array_key_exists('module_suites', $value) ) 
+            {
+                $dependencies = array_map(function($module){return "'$module'";}, $value['module_suites']);
+                $data .= "Section::inject('module_suites', \"".implode(',', $dependencies)."\");\n\t";
+            }
             $data .= "Section::inject('title', '$key Tests');\n\n\treturn View::make('jasminetesting::tests.testsuite');\n});\n";
         }
         
