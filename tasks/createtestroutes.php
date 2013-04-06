@@ -13,10 +13,6 @@ class JasmineTesting_CreateTestRoutes_Task
         
         $data = "<?php";
         $data .= "\nRoute::get('/{$pgconfig["testRoute"]}', array('as' => 'testRoute', function() {\n\n\t";
-        foreach ($pgconfig["commonAssets"] as $item)
-        {
-            $data .= "Asset::add('$item', '$item');\n\t";
-        }
             
         $data .= "return View::make('jasminetesting::tests.testhome')->with('runners', array(";
         foreach ($pgconfig["testRunners"] as $name => $value)
@@ -32,6 +28,10 @@ class JasmineTesting_CreateTestRoutes_Task
             $data .= "Asset::container('foo')->add('jasmine.css', 'css/jasmine.css');\n\t";
             $data .= "Asset::container('foo')->add('jasmine.js', 'js/jasmine.js');\n\t";
             $data .= "Asset::container('foo')->add('jasmine-html.js', 'js/jasmine-html.js');\n\t";
+            foreach ($pgconfig["commonAssets"] as $item)
+            {
+                $data .= "Asset::add('$item', '$item');\n\t";
+            }
             foreach ($value["scripts"] as $item)
             {
                 $data .= "Asset::add('$item', '$item');\n\t";
